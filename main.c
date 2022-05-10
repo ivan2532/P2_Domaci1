@@ -20,7 +20,7 @@ int CheckTimeInput(const char* inputString)
 	if (!(inputString[0] >= '0' && inputString[0] <= '2'))
 		return ERROR;
 
-	if (inputString[0] == '0' || inputString == '1')
+	if (inputString[0] == '0' || inputString[0] == '1')
 	{
 		if (!isdigit(inputString[1]))
 			return ERROR;
@@ -50,7 +50,7 @@ int CheckTimeInput(const char* inputString)
 int TimeInput(int* output, bool checkFormat)
 {
 	char inputString[6];
-	scanf("%s", &inputString);
+	scanf("%s", inputString);
 
 	if (checkFormat && CheckTimeInput(inputString) < 0)
 		return ERROR;
@@ -58,6 +58,8 @@ int TimeInput(int* output, bool checkFormat)
 	int hours = (inputString[0] - '0') * 10 + (inputString[1] - '0');
 	int minutes = (inputString[3] - '0') * 10 + (inputString[4] - '0');
 	*output = hours * 60 + minutes;
+
+	return 0;
 }
 
 int UserInput(int* n, IntPair** visitorTimes, int* timeToCheck)
