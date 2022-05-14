@@ -24,6 +24,7 @@
     <ProjectGuid>{11aeda16-76aa-4723-89fc-7d075243b2f1}</ProjectGuid>
     <RootNamespace>CPlayground</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>P2_Domaci1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
